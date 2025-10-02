@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
 export default function WelcomeAnimation() {
-  const [isVisible, setIsVisible] = useState(true)
-  const [isAnimating, setIsAnimating] = useState(true)
+  const [isVisible, setIsVisible] = useState(true);
+  const [isAnimating, setIsAnimating] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsAnimating(false)
+      setIsAnimating(false);
       setTimeout(() => {
-        setIsVisible(false)
-      }, 500)
-    }, 3000)
+        setIsVisible(false);
+      }, 500);
+    }, 3000);
 
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
-  if (!isVisible) return null
+  if (!isVisible) return null;
 
   return (
     <div
@@ -27,17 +27,22 @@ export default function WelcomeAnimation() {
     >
       <div className="text-center">
         <div className="animate-scale-in">
-          <div className="w-24 h-24 bg-primary-foreground rounded-full flex items-center justify-center mx-auto mb-6">
-            <span className="text-primary font-bold text-4xl">Y</span>
+          <div className="mb-6">
+            <span className="text-primary-foreground font-bold text-5xl tracking-tight logo-yeksan">
+              YEKS<span className="architectural-a"></span>N
+            </span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4 animate-fade-in-up">
-            Yeksan İnşaat
+          <h1 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4 animate-fade-in-up">
+            İnşaat
           </h1>
-          <p className="text-xl text-primary-foreground/80 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <p
+            className="text-xl text-primary-foreground/80 animate-fade-in-up"
+            style={{ animationDelay: "0.3s" }}
+          >
             Hoş Geldiniz
           </p>
         </div>
       </div>
     </div>
-  )
+  );
 }

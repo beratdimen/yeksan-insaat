@@ -24,13 +24,11 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">Y</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-lg text-foreground">Yeksan</span>
-              <span className="text-xs text-muted-foreground">İnşaat</span>
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="flex items-center">
+              <span className="text-primary font-bold text-2xl tracking-tight logo-yeksan">
+                YEKS<span className="architectural-a"></span>N
+              </span>
             </div>
           </Link>
 
@@ -50,18 +48,18 @@ export default function Header() {
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="tel:+905551234567"
+              href="tel:+902128542671"
               className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="text-sm">0555 123 45 67</span>
+              <span className="text-sm">0 212 854 26 71</span>
             </a>
             <a
-              href="mailto:info@yeksaninsaat.com"
+              href="mailto:bilgi@yeksaninsaat.com"
               className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail className="w-4 h-4" />
-              <span className="text-sm">info@yeksaninsaat.com</span>
+              <span className="text-sm">bilgi@yeksaninsaat.com</span>
             </a>
           </div>
 
@@ -90,18 +88,18 @@ export default function Header() {
             ))}
             <div className="px-4 py-2 space-y-2 border-t border-border mt-4 pt-4">
               <a
-                href="tel:+905551234567"
+                href="tel:+902128542671"
                 className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>0555 123 45 67</span>
+                <span>0 212 854 26 71</span>
               </a>
               <a
-                href="mailto:info@yeksaninsaat.com"
+                href="mailto:bilgi@yeksaninsaat.com"
                 className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span>info@yeksaninsaat.com</span>
+                <span>bilgi@yeksaninsaat.com</span>
               </a>
             </div>
           </nav>

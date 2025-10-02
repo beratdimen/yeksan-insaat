@@ -21,7 +21,7 @@ export default function HomePage() {
   }, [])
 
   return (
-    <>
+    <div className="architectural-ruler blueprint-bg min-h-screen">
       {showWelcome && <WelcomeAnimation />}
       <HeroSection />
       <ServicesSection />
@@ -29,6 +29,6 @@ export default function HomePage() {
       <ProjectsSection />
       <AboutSection />
       <ContactCTASection />
-    </>
+    </div>
   )
 }

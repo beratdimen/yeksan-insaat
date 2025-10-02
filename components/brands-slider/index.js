@@ -1,35 +1,35 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
 export default function BrandsSlider() {
   const brands = [
-    { name: "Akçansa", logo: "/ak-ansa-logo.jpg" },
-    { name: "Çimsa", logo: "/-imsa-logo.jpg" },
-    { name: "Nuh Çimento", logo: "/nuh--imento-logo.jpg" },
-    { name: "Baumit", logo: "/baumit-logo.jpg" },
-    { name: "İzocam", logo: "/-zocam-logo.jpg" },
-    { name: "Knauf", logo: "/knauf-logo.jpg" },
-    { name: "Bosch", logo: "/bosch-logo.png" },
-    { name: "Hilti", logo: "/hilti-logo.jpg" },
-  ]
+    { name: "Akçansa", logo: "/1.jpg" },
+    { name: "Çimsa", logo: "/2.jpg" },
+    { name: "Nuh Çimento", logo: "/3.jpg" },
+    { name: "İzocam", logo: "/5.jpg" },
+  ];
 
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % brands.length)
-    }, 3000)
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % brands.length);
+    }, 3000);
 
-    return () => clearInterval(timer)
-  }, [brands.length])
+    return () => clearInterval(timer);
+  }, [brands.length]);
 
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-16 bg-muted/60">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Çalıştığımız Markalar</h2>
-          <p className="text-muted-foreground">Kaliteli malzemeler için güvendiğimiz markalar</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            Çalıştığımız Markalar
+          </h2>
+          <p className="text-muted-foreground">
+            Kaliteli malzemeler için güvendiğimiz markalar
+          </p>
         </div>
 
         <div className="relative overflow-hidden">
@@ -64,5 +64,5 @@ export default function BrandsSlider() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -10,17 +10,18 @@
 
   /* Updated color palette to blue tones (#1A489B, #1B4799, #6B88BD) and white */
   --background: #ffffff;
-  --foreground: #1a489b;
+  --foreground: #1f2937;
+  --black: #000000;
   --card: #ffffff;
-  --card-foreground: #1a489b;
+  --card-foreground: #374151;
   --popover: #ffffff;
-  --popover-foreground: #1a489b;
+  --popover-foreground: #374151;
   --primary: #1a489b;
   --primary-foreground: #ffffff;
   --secondary: #1b4799;
   --secondary-foreground: #ffffff;
   --muted: #f8fafc;
-  --muted-foreground: #6b88bd;
+  --muted-foreground: #6b7280;
   --accent: #6b88bd;
   --accent-foreground: #ffffff;
   --destructive: #dc2626;
@@ -35,7 +36,7 @@
   --chart-5: #cbd5e1;
   --radius: 0.625rem;
   --sidebar: #ffffff;
-  --sidebar-foreground: #1a489b;
+  --sidebar-foreground: #374151;
   --sidebar-primary: #1a489b;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #6b88bd;
@@ -165,3 +166,220 @@
 .animate-scale-in {
   animation: scale-in 0.8s ease-out forwards;
 }
+
+/* Architectural Ruler Background Pattern */
+.architectural-bg {
+  background-image: 
+    /* Horizontal lines */
+    linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    /* Vertical lines */
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    /* Major grid lines every 10 units */
+    linear-gradient(to right, rgba(0, 0, 0, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 1px, transparent 1px);
+  background-size: 
+    20px 20px,  /* Minor grid */
+    20px 20px,  /* Minor grid */
+    200px 200px, /* Major grid */
+    200px 200px; /* Major grid */
+  background-position: 
+    0 0, 0 0, 0 0, 0 0;
+}
+
+/* Architectural ruler markings */
+.architectural-ruler {
+  position: relative;
+}
+
+.architectural-ruler::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    /* Top ruler */
+    linear-gradient(to right, 
+      transparent 0px, transparent 9px,
+      rgba(0, 0, 0, 0.3) 10px, rgba(0, 0, 0, 0.3) 10px,
+      transparent 11px, transparent 19px,
+      rgba(0, 0, 0, 0.2) 20px, rgba(0, 0, 0, 0.2) 20px,
+      transparent 21px, transparent 29px,
+      rgba(0, 0, 0, 0.2) 30px, rgba(0, 0, 0, 0.2) 30px,
+      transparent 31px, transparent 39px,
+      rgba(0, 0, 0, 0.2) 40px, rgba(0, 0, 0, 0.2) 40px,
+      transparent 41px, transparent 49px,
+      rgba(0, 0, 0, 0.2) 50px, rgba(0, 0, 0, 0.2) 50px,
+      transparent 51px, transparent 59px,
+      rgba(0, 0, 0, 0.2) 60px, rgba(0, 0, 0, 0.2) 60px,
+      transparent 61px, transparent 69px,
+      rgba(0, 0, 0, 0.2) 70px, rgba(0, 0, 0, 0.2) 70px,
+      transparent 71px, transparent 79px,
+      rgba(0, 0, 0, 0.2) 80px, rgba(0, 0, 0, 0.2) 80px,
+      transparent 81px, transparent 89px,
+      rgba(0, 0, 0, 0.2) 90px, rgba(0, 0, 0, 0.2) 90px,
+      transparent 91px, transparent 99px,
+      rgba(0, 0, 0, 0.4) 100px, rgba(0, 0, 0, 0.4) 100px
+    ),
+    /* Left ruler */
+    linear-gradient(to bottom, 
+      transparent 0px, transparent 9px,
+      rgba(0, 0, 0, 0.3) 10px, rgba(0, 0, 0, 0.3) 10px,
+      transparent 11px, transparent 19px,
+      rgba(0, 0, 0, 0.2) 20px, rgba(0, 0, 0, 0.2) 20px,
+      transparent 21px, transparent 29px,
+      rgba(0, 0, 0, 0.2) 30px, rgba(0, 0, 0, 0.2) 30px,
+      transparent 31px, transparent 39px,
+      rgba(0, 0, 0, 0.2) 40px, rgba(0, 0, 0, 0.2) 40px,
+      transparent 41px, transparent 49px,
+      rgba(0, 0, 0, 0.2) 50px, rgba(0, 0, 0, 0.2) 50px,
+      transparent 51px, transparent 59px,
+      rgba(0, 0, 0, 0.2) 60px, rgba(0, 0, 0, 0.2) 60px,
+      transparent 61px, transparent 69px,
+      rgba(0, 0, 0, 0.2) 70px, rgba(0, 0, 0, 0.2) 70px,
+      transparent 71px, transparent 79px,
+      rgba(0, 0, 0, 0.2) 80px, rgba(0, 0, 0, 0.2) 80px,
+      transparent 81px, transparent 89px,
+      rgba(0, 0, 0, 0.2) 90px, rgba(0, 0, 0, 0.2) 90px,
+      transparent 91px, transparent 99px,
+      rgba(0, 0, 0, 0.4) 100px, rgba(0, 0, 0, 0.4) 100px
+    );
+  background-size: 100px 20px, 20px 100px;
+  background-position: 0 0, 0 0;
+  background-repeat: repeat-x, repeat-y;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Subtle architectural grid for sections */
+.section-architectural-bg {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Blueprint-style background */
+.blueprint-bg {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.1) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Technical drawing grid */
+.technical-grid {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+
+/* Custom YEKSAN Logo Styles */
+.logo-yeksan {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.logo-yeksan .letter-a {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-yeksan .letter-a::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0.15em;
+  height: 100%;
+  background-color: #9ca3af; /* Gray color for the right leg */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+
+/* Alternative approach with CSS custom properties */
+.logo-yeksan-alt {
+  background: linear-gradient(45deg, 
+    var(--primary) 0%, 
+    var(--primary) 85%, 
+    #9ca3af 85%, 
+    #9ca3af 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+}
+
+/* Architectural A design */
+.architectural-a {
+  position: relative;
+  display: inline-block;
+}
+
+.architectural-a::before {
+  content: 'A';
+  color: var(--primary);
+}
+
+.architectural-a::after {
+  content: '';
+  position: absolute;
+  right: -0.1em;
+  top: 0;
+  width: 0.2em;
+  height: 100%;
+  background: linear-gradient(to bottom, 
+    transparent 0%, 
+    transparent 15%, 
+    #9ca3af 15%, 
+    #9ca3af 100%
+  );
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+
+
+/* More transparent architectural background for hero */
+.hero-architectural-bg {
+  background-image: 
+    /* Horizontal lines - more transparent */
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    /* Vertical lines - more transparent */
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    /* Major grid lines every 10 units - more transparent */
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 
+    20px 20px,  /* Minor grid */
+    20px 20px,  /* Minor grid */
+    200px 200px, /* Major grid */
+    200px 200px; /* Major grid */
+  background-position: 
+    0 0, 0 0, 0 0, 0 0;
+}
+
+
+/* Ultra transparent architectural background for hero */
+.hero-architectural-bg-ultra-transparent {
+  background-image: 
+    /* Horizontal lines - ultra transparent */
+    linear-gradient(to right, rgba(0, 0, 0, 0.01) 1px, transparent 1px),
+    /* Vertical lines - ultra transparent */
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.01) 1px, transparent 1px),
+    /* Major grid lines every 10 units - ultra transparent */
+    linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 
+    20px 20px,  /* Minor grid */
+    20px 20px,  /* Minor grid */
+    200px 200px, /* Major grid */
+    200px 200px; /* Major grid */
+  background-position: 
+    0 0, 0 0, 0 0, 0 0;
+}
+

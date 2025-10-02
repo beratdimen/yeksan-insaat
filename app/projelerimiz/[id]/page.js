@@ -1,13 +1,22 @@
-"use client"
+"use client";
 
-import { useParams } from "next/navigation"
-import Header from "../../../components/header"
-import { ArrowLeft, MapPin, Calendar, Building, Wrench, Shield, CheckCircle, Phone } from "lucide-react"
-import Link from "next/link"
+import { useParams } from "next/navigation";
+import Header from "../../../components/header";
+import {
+  ArrowLeft,
+  MapPin,
+  Calendar,
+  Building,
+  Wrench,
+  Shield,
+  CheckCircle,
+  Phone,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function ProjeDetayPage() {
-  const params = useParams()
-  const projectId = Number.parseInt(params.id)
+  const params = useParams();
+  const projectId = Number.parseInt(params.id);
 
   const projects = [
     {
@@ -17,7 +26,11 @@ export default function ProjeDetayPage() {
       longDescription:
         "Bu projede müşterimizin hayalindeki modern villayı gerçeğe dönüştürdük. 300 metrekare yaşam alanına sahip villa, çağdaş mimari anlayışla tasarlandı ve en kaliteli malzemelerle inşa edildi.",
       image: "/modern-villa-construction.jpg",
-      gallery: ["/modern-villa-construction.jpg", "/placeholder.svg?key=villa02", "/placeholder.svg?key=villa03"],
+      gallery: [
+        "/modern-villa-construction.jpg",
+        "/placeholder.svg?key=villa02",
+        "/placeholder.svg?key=villa03",
+      ],
       status: "Tamamlandı",
       location: "Ankara",
       date: "2024",
@@ -33,7 +46,12 @@ export default function ProjeDetayPage() {
         "Geniş yaşam alanları",
         "Peyzaj düzenlemesi",
       ],
-      services: ["Temel işleri", "Duvar örme", "Çatı konstrüksiyonu", "İç ve dış sıva"],
+      services: [
+        "Temel işleri",
+        "Duvar örme",
+        "Çatı konstrüksiyonu",
+        "İç ve dış sıva",
+      ],
     },
     {
       id: 2,
@@ -42,7 +60,11 @@ export default function ProjeDetayPage() {
       longDescription:
         "İstanbul'da bulunan ofis binasının komple yenilenmesi projesi. Modern çalışma ortamları oluşturarak verimliliği artırmayı hedefledik.",
       image: "/office-renovation.png",
-      gallery: ["/office-renovation.png", "/placeholder.svg?key=office02", "/placeholder.svg?key=office03"],
+      gallery: [
+        "/office-renovation.png",
+        "/placeholder.svg?key=office02",
+        "/placeholder.svg?key=office03",
+      ],
       status: "Devam Ediyor",
       location: "İstanbul",
       date: "2024",
@@ -58,7 +80,12 @@ export default function ProjeDetayPage() {
         "Teknoloji entegrasyonu",
         "Sürdürülebilir malzemeler",
       ],
-      services: ["İç mekan tadilat", "Elektrik yenileme", "Klima sistemleri", "Dekorasyon"],
+      services: [
+        "İç mekan tadilat",
+        "Elektrik yenileme",
+        "Klima sistemleri",
+        "Dekorasyon",
+      ],
     },
     {
       id: 3,
@@ -67,7 +94,11 @@ export default function ProjeDetayPage() {
       longDescription:
         "İzmir'de 8 katlı apartmanın enerji verimliliğini artırmak için gerçekleştirdiğimiz kapsamlı dış cephe yalıtım projesi.",
       image: "/apartment-insulation-work.jpg",
-      gallery: ["/apartment-insulation-work.jpg", "/placeholder.svg?key=insul02", "/placeholder.svg?key=insul03"],
+      gallery: [
+        "/apartment-insulation-work.jpg",
+        "/placeholder.svg?key=insul02",
+        "/placeholder.svg?key=insul03",
+      ],
       status: "Tamamlandı",
       location: "İzmir",
       date: "2023",
@@ -83,15 +114,25 @@ export default function ProjeDetayPage() {
         "Uzun ömürlü malzemeler",
         "Çevre dostu çözümler",
       ],
-      services: ["Mantolama sistemi", "Cephe kaplama", "Detay işleri", "Kalite kontrol"],
+      services: [
+        "Mantolama sistemi",
+        "Cephe kaplama",
+        "Detay işleri",
+        "Kalite kontrol",
+      ],
     },
     {
       id: 4,
       title: "Fabrika İnşaatı",
       description: "Bursa'da 2000m² endüstriyel fabrika inşaatı",
-      longDescription: "Bursa'da endüstriyel üretim için tasarlanan 2000 metrekare fabrika binasının inşaat projesi.",
+      longDescription:
+        "Bursa'da endüstriyel üretim için tasarlanan 2000 metrekare fabrika binasının inşaat projesi.",
       image: "/factory-construction-site.jpg",
-      gallery: ["/factory-construction-site.jpg", "/placeholder.svg?key=factory02", "/placeholder.svg?key=factory03"],
+      gallery: [
+        "/factory-construction-site.jpg",
+        "/placeholder.svg?key=factory02",
+        "/placeholder.svg?key=factory03",
+      ],
       status: "Devam Ediyor",
       location: "Bursa",
       date: "2024",
@@ -107,30 +148,34 @@ export default function ProjeDetayPage() {
         "Vinç sistemleri",
         "Güvenlik standartları",
       ],
-      services: ["Çelik konstrüksiyon", "Betonarme işler", "Çatı sistemleri", "Altyapı"],
+      services: [
+        "Çelik konstrüksiyon",
+        "Betonarme işler",
+        "Çatı sistemleri",
+        "Altyapı",
+      ],
     },
-  ]
+  ];
 
-  const project = projects.find((p) => p.id === projectId)
+  const project = projects.find((p) => p.id === projectId);
 
   if (!project) {
     return (
       <div className="min-h-screen bg-background">
-        <Header />
         <div className="container mx-auto px-4 py-20 text-center">
-          <h1 className="text-2xl font-bold text-foreground mb-4">Proje Bulunamadı</h1>
+          <h1 className="text-2xl font-bold text-foreground mb-4">
+            Proje Bulunamadı
+          </h1>
           <Link href="/projelerimiz" className="text-primary hover:underline">
             Projelerimize Dön
           </Link>
         </div>
       </div>
-    )
+    );
   }
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
       {/* Breadcrumb */}
       <div className="bg-muted/30 py-4">
         <div className="container mx-auto px-4">
@@ -139,7 +184,10 @@ export default function ProjeDetayPage() {
               Anasayfa
             </Link>
             <span>/</span>
-            <Link href="/projelerimiz" className="hover:text-primary transition-colors">
+            <Link
+              href="/projelerimiz"
+              className="hover:text-primary transition-colors"
+            >
               Projelerimiz
             </Link>
             <span>/</span>
@@ -166,10 +214,14 @@ export default function ProjeDetayPage() {
                   <project.icon className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <h1 className="text-3xl md:text-4xl font-bold text-foreground">{project.title}</h1>
+                  <h1 className="text-3xl md:text-4xl font-bold text-foreground">
+                    {project.title}
+                  </h1>
                   <span
                     className={`inline-block px-3 py-1 rounded-full text-sm font-medium mt-2 ${
-                      project.status === "Tamamlandı" ? "bg-green-100 text-green-800" : "bg-blue-100 text-blue-800"
+                      project.status === "Tamamlandı"
+                        ? "bg-green-100 text-green-800"
+                        : "bg-blue-100 text-blue-800"
                     }`}
                   >
                     {project.status}
@@ -177,37 +229,55 @@ export default function ProjeDetayPage() {
                 </div>
               </div>
 
-              <p className="text-xl text-muted-foreground mb-8">{project.longDescription}</p>
+              <p className="text-xl text-muted-foreground mb-8">
+                {project.longDescription}
+              </p>
 
               {/* Project Info */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-muted/50 rounded-lg p-4">
                   <div className="flex items-center space-x-2 mb-2">
                     <MapPin className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-medium text-muted-foreground">Konum</span>
+                    <span className="text-sm font-medium text-muted-foreground">
+                      Konum
+                    </span>
                   </div>
-                  <span className="text-foreground font-semibold">{project.location}</span>
+                  <span className="text-foreground font-semibold">
+                    {project.location}
+                  </span>
                 </div>
                 <div className="bg-muted/50 rounded-lg p-4">
                   <div className="flex items-center space-x-2 mb-2">
                     <Calendar className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-medium text-muted-foreground">Tarih</span>
+                    <span className="text-sm font-medium text-muted-foreground">
+                      Tarih
+                    </span>
                   </div>
-                  <span className="text-foreground font-semibold">{project.date}</span>
+                  <span className="text-foreground font-semibold">
+                    {project.date}
+                  </span>
                 </div>
                 <div className="bg-muted/50 rounded-lg p-4">
                   <div className="flex items-center space-x-2 mb-2">
                     <Building className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-medium text-muted-foreground">Alan</span>
+                    <span className="text-sm font-medium text-muted-foreground">
+                      Alan
+                    </span>
                   </div>
-                  <span className="text-foreground font-semibold">{project.area}</span>
+                  <span className="text-foreground font-semibold">
+                    {project.area}
+                  </span>
                 </div>
                 <div className="bg-muted/50 rounded-lg p-4">
                   <div className="flex items-center space-x-2 mb-2">
                     <Calendar className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-medium text-muted-foreground">Süre</span>
+                    <span className="text-sm font-medium text-muted-foreground">
+                      Süre
+                    </span>
                   </div>
-                  <span className="text-foreground font-semibold">{project.duration}</span>
+                  <span className="text-foreground font-semibold">
+                    {project.duration}
+                  </span>
                 </div>
               </div>
 
@@ -256,7 +326,9 @@ export default function ProjeDetayPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Proje Özellikleri</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-6">
+                Proje Özellikleri
+              </h2>
               <ul className="space-y-3">
                 {project.features.map((feature, index) => (
                   <li key={index} className="flex items-center space-x-3">
@@ -268,11 +340,18 @@ export default function ProjeDetayPage() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Uygulanan Hizmetler</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-6">
+                Uygulanan Hizmetler
+              </h2>
               <div className="grid grid-cols-1 gap-3">
                 {project.services.map((service, index) => (
-                  <div key={index} className="bg-card border border-border rounded-lg p-4">
-                    <span className="text-card-foreground font-medium">{service}</span>
+                  <div
+                    key={index}
+                    className="bg-card border border-border rounded-lg p-4"
+                  >
+                    <span className="text-card-foreground font-medium">
+                      {service}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -284,10 +363,14 @@ export default function ProjeDetayPage() {
       {/* Related Projects */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Benzer Projeler</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
+            Benzer Projeler
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {projects
-              .filter((p) => p.id !== projectId && p.category === project.category)
+              .filter(
+                (p) => p.id !== projectId && p.category === project.category
+              )
               .slice(0, 3)
               .map((relatedProject) => (
                 <Link
@@ -304,7 +387,9 @@ export default function ProjeDetayPage() {
                     <h3 className="font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors">
                       {relatedProject.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-3">{relatedProject.description}</p>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      {relatedProject.description}
+                    </p>
                     <div className="flex items-center justify-between text-xs text-muted-foreground">
                       <span>{relatedProject.location}</span>
                       <span
@@ -324,5 +409,5 @@ export default function ProjeDetayPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

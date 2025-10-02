@@ -36,8 +36,8 @@ export default function ServicesSection() {
   ]
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-background technical-grid relative">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Hizmetlerimiz</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -50,7 +50,7 @@ export default function ServicesSection() {
             <Link
               key={index}
               href={service.href}
-              className="group bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:border-primary/20"
+              className="group bg-card/80 backdrop-blur-sm border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:border-primary/20 hover:bg-card/90"
             >
               <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4 group-hover:bg-primary/20 transition-colors">
                 <service.icon className="w-6 h-6 text-primary" />

@@ -7,29 +7,23 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">
-                  Y
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="flex items-center">
+                <span className="text-white font-bold text-2xl tracking-tight logo-yeksan">
+                  YEKS<span className="architectural-a"></span>N
                 </span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-lg text-secondary-foreground">
-                  Yeksan
-                </span>
-                <span className="text-xs text-muted-foreground">İnşaat</span>
               </div>
             </div>
-            <p className="text-muted-foreground">
-              Güvenilir inşaat çözümleri için doğru adres.
+            <p className="text-gray-300">
+              İnşaat sektörünün güvenilir ve tecrübeli ismi Yeksan İnşaat, yapı alanındaki talepleri hızlı ve sorunsuz olarak yıllardır yerine getiriyor.
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-secondary-foreground mb-4">
+            <h3 className="font-semibold text-white mb-4">
               Hizmetlerimiz
             </h3>
-            <ul className="space-y-2 text-muted-foreground">
+            <ul className="space-y-2 text-gray-300">
               <li>
                 <Link
                   href="/hizmetlerimiz/kaba-insaat"
@@ -66,10 +60,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-secondary-foreground mb-4">
+            <h3 className="font-semibold text-white mb-4">
               Kurumsal
             </h3>
-            <ul className="space-y-2 text-muted-foreground">
+            <ul className="space-y-2 text-gray-300">
               <li>
                 <Link
                   href="/hakkimizda"
@@ -98,33 +92,33 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-secondary-foreground mb-4">
+            <h3 className="font-semibold text-white mb-4">
               İletişim
             </h3>
-            <div className="space-y-2 text-muted-foreground">
+            <div className="space-y-2 text-gray-300">
               <a
-                href="tel:+905551234567"
+                href="tel:+902128542671"
                 className="flex items-center space-x-2 hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>0555 123 45 67</span>
+                <span>0 212 854 26 71</span>
               </a>
               <a
-                href="mailto:info@yeksaninsaat.com"
+                href="mailto:bilgi@yeksaninsaat.com"
                 className="flex items-center space-x-2 hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span>info@yeksaninsaat.com</span>
+                <span>bilgi@yeksaninsaat.com</span>
               </a>
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 mt-1" />
-                <span>Ankara, Türkiye</span>
+                <span>Barış Mah. Belediye Cad. Ginza Lavinya Park Sitesi B Blok No: 30/106 Beylikdüzü / İstanbul</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
+        <div className="border-t border-gray-600 mt-8 pt-8 text-center text-gray-300">
           <p>&copy; 2025 Yeksan İnşaat. Tüm hakları saklıdır.</p>
         </div>
       </div>

@@ -3,14 +3,14 @@ import { ArrowRight } from "lucide-react"
 
 export default function AboutSection() {
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-background section-architectural-bg relative">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Neden Yeksan İnşaat?</h2>
             <p className="text-lg text-muted-foreground mb-6">
-              15 yıllık deneyimimiz ve uzman kadromuzla inşaat sektöründe güvenilir bir partner olarak hizmet veriyoruz.
-              Kalite, güvenilirlik ve müşteri memnuniyeti önceliklerimizdir.
+              İnşaat sektörünün güvenilir ve tecrübeli ismi Yeksan İnşaat, yapı alanındaki talepleri hızlı ve sorunsuz olarak yıllardır yerine getiriyor. 
+              Bugüne kadar birçok önemli yapı projeleri üzerinde çalışmış sektörde kendine önemli bir yer edinmiştir.
             </p>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
