@@ -1,15 +1,16 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X, Phone, Mail } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X, Phone, Mail } from "lucide-react";
+import Image from "next/image";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const navItems = [
     { name: "Anasayfa", href: "/" },
@@ -17,7 +18,7 @@ export default function Header() {
     { name: "Hizmetlerimiz", href: "/hizmetlerimiz" },
     { name: "Projelerimiz", href: "/projelerimiz" },
     { name: "İletişim", href: "/iletisim" },
-  ]
+  ];
 
   return (
     <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
@@ -26,9 +27,14 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
             <div className="flex items-center">
-              <span className="text-primary font-bold text-2xl tracking-tight logo-yeksan">
-                YEKS<span className="architectural-a"></span>N
-              </span>
+              <Image
+                src="/logo-yeksan.png"
+                alt="Yeksan İnşaat Logo"
+                width={140}
+                height={40}
+                className="object-contain"
+                priority
+              />
             </div>
           </Link>
 
@@ -64,8 +70,15 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={toggleMenu} className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors">
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+          >
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -106,5 +119,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

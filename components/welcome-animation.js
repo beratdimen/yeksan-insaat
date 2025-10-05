@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function WelcomeAnimation() {
@@ -28,15 +29,22 @@ export default function WelcomeAnimation() {
       <div className="text-center">
         <div className="animate-scale-in">
           <div className="mb-6">
-            <span className="text-primary-foreground font-bold text-5xl tracking-tight logo-yeksan">
-              YEKS<span className="architectural-a"></span>N
-            </span>
+            <div className="flex items-center">
+              <Image
+                src="/logo-yeksan.png"
+                alt="Yeksan İnşaat Logo"
+                width={240}
+                height={40}
+                className="object-contain"
+                priority
+              />
+            </div>
           </div>
-          <h1 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4 animate-fade-in-up">
+          <h1 className="text-3xl md:text-3xl font-bold text-primary-foreground mb-4 animate-fade-in-up">
             İnşaat
           </h1>
           <p
-            className="text-xl text-primary-foreground/80 animate-fade-in-up"
+            className="text-2xl text-primary-foreground/80 animate-fade-in-up"
             style={{ animationDelay: "0.3s" }}
           >
             Hoş Geldiniz
