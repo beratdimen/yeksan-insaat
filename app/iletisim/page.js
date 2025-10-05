@@ -8,8 +8,8 @@ export default function IletisimPage() {
     {
       icon: Phone,
       title: "Telefon",
-      info: "0555 123 45 67",
-      action: "tel:+905551234567",
+      info: "0 212 854 26 71",
+      action: "tel:+902128542671",
       description: "Hemen arayın, size yardımcı olalım",
     },
     {
@@ -29,7 +29,7 @@ export default function IletisimPage() {
     {
       icon: MapPin,
       title: "Adres",
-      info: "Çankaya, Ankara",
+      info: "Beylikdüzü, İstanbul",
       action: "#",
       description: "Ofisimize bekleriz",
     },
@@ -112,7 +112,7 @@ export default function IletisimPage() {
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+905551234567"
+                href="tel:+902128542671"
                 className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-semibold"
               >
                 <Phone className="mr-2 w-5 h-5" />
@@ -292,7 +292,7 @@ export default function IletisimPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+905551234567"
+              href="tel:+90 212 854 26 71"
               className="inline-flex items-center justify-center px-8 py-4 bg-primary-foreground text-primary rounded-lg hover:bg-primary-foreground/90 transition-colors font-semibold"
             >
               <Phone className="mr-2 w-5 h-5" />

@@ -21,7 +21,7 @@ export default function WelcomeAnimation() {
 
   return (
     <div
-      className={`fixed inset-0 z-50 bg-primary flex items-center justify-center transition-opacity duration-500 ${
+      className={`fixed inset-0 z-50 bg-gradient-to-b from-white via-blue-100 to-blue-500 flex items-center justify-center transition-opacity duration-500 ${
         isAnimating ? "opacity-100" : "opacity-0"
       }`}
     >

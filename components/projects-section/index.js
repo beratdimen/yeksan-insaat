@@ -1,88 +1,90 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { ArrowRight, MapPin } from "lucide-react"
-import { useState, useEffect } from "react"
+import Link from "next/link";
+import { ArrowRight, MapPin } from "lucide-react";
+import { useState, useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/components/ui/carousel";
 
 export default function ProjectsSection() {
-  const [api, setApi] = useState()
+  const [api, setApi] = useState();
 
   const projects = [
     {
       id: 1,
-      title: "Modern Villa Projesi",
-      image: "/modern-villa-construction.jpg",
+      title: "Beşiktaş Tüpraş Stadyumu",
+      image: "/besiktas.jpg",
       status: "Tamamlandı",
-      location: "Ankara",
-      description: "Lüks villa inşaatı projesi"
+      location: "İstanbul",
+      description: "Tüpraş Stadyumu inşaatı projesi",
     },
     {
       id: 2,
-      title: "Ofis Binası Tadilat",
-      image: "/office-renovation.png",
-      status: "Devam Ediyor",
-      location: "İstanbul",
-      description: "Modern ofis binası tadilat çalışması"
+      title: "SOCAR Star Rafineri",
+      image: "/socar.jpg",
+      status: "Tamamlandı",
+      location: "İzmir",
+      description: "SOCAR Star Rafineri inşaatı projesi",
     },
     {
       id: 3,
-      title: "Apartman Yalıtım",
-      image: "/apartment-insulation-work.jpg",
+      title: "Artaş Vadi İstanbul",
+      image: "/artas-vadi-istanbul.jpg",
       status: "Tamamlandı",
-      location: "İzmir",
-      description: "Termal yalıtım uygulaması"
+      location: "İstanbul",
+      description: "Vadi İstanbul konut projesi",
     },
     {
       id: 4,
-      title: "Fabrika İnşaatı",
-      image: "/factory-construction-site.jpg",
-      status: "Devam Ediyor",
-      location: "Bursa",
-      description: "Endüstriyel tesis inşaatı"
+      title: "THY İstanbul Havalimanı",
+      image: "/thy.jpg",
+      status: "Tamamlandı",
+      location: "İstanbul",
+      description: "İstanbul Havalimanı inşaatı projesi",
     },
     {
       id: 5,
-      title: "Ev Renovasyonu",
-      image: "/home-renovation-modern-interior.jpg",
+      title: "Ekici 24 AVM",
+      image: "/ekici24.jpg",
       status: "Tamamlandı",
-      location: "Antalya",
-      description: "Modern iç mekan tasarımı"
+      location: "İstanbul",
+      description: "Ekici 24 Alışveriş Merkezi inşaatı projesi",
     },
     {
       id: 6,
-      title: "Temel İnşaatı",
-      image: "/construction-foundation-concrete-work.jpg",
-      status: "Devam Ediyor",
-      location: "Ankara",
-      description: "Güçlü temel yapı çalışması"
-    }
-  ]
+      title: "Zen Deniz",
+      image: "/zen-deniz.jpg",
+      status: "Tamamlandı",
+      location: "İstanbul",
+      description: "Zen Deniz villa projesi",
+    },
+  ];
 
   // Auto-play functionality
   useEffect(() => {
     if (!api) {
-      return
+      return;
     }
 
     const interval = setInterval(() => {
-      api.scrollNext()
-    }, 4000) // Change slide every 4 seconds
+      api.scrollNext();
+    }, 4000); // Change slide every 4 seconds
 
-    return () => clearInterval(interval)
-  }, [api])
+    return () => clearInterval(interval);
+  }, [api]);
 
   return (
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Projelerimiz</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Projelerimiz
+          </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Gerçekleştirdiğimiz başarılı projelerden örnekler
           </p>
@@ -100,7 +102,10 @@ export default function ProjectsSection() {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {projects.map((project) => (
-                <CarouselItem key={project.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem
+                  key={project.id}
+                  className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
+                >
                   <Link
                     href={`/projelerimiz/${project.id}`}
                     className="group block"
@@ -133,7 +138,9 @@ export default function ProjectsSection() {
                           </span>
                           <span
                             className={`px-2 py-1 rounded-full text-xs ${
-                              project.status === "Tamamlandı" ? "bg-green-100 text-green-800" : "bg-blue-100 text-blue-800"
+                              project.status === "Tamamlandı"
+                                ? "bg-green-100 text-green-800"
+                                : "bg-blue-100 text-blue-800"
                             }`}
                           >
                             {project.status}
@@ -161,5 +168,5 @@ export default function ProjectsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

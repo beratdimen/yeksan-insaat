@@ -4,10 +4,13 @@ import { useState, useEffect } from "react";
 
 export default function BrandsSlider() {
   const brands = [
-    { name: "Akçansa", logo: "/1.jpg" },
-    { name: "Çimsa", logo: "/2.jpg" },
-    { name: "Nuh Çimento", logo: "/3.jpg" },
-    { name: "İzocam", logo: "/5.jpg" },
+    { name: "Petkim", logo: "/1.jpg" },
+    { name: "Socar", logo: "/2.jpg" },
+    { name: "THY", logo: "/3.jpg" },
+    { name: "24", logo: "/4.png" },
+    { name: "Beşiktaş", logo: "/5.jpg" },
+    { name: "Artaş", logo: "/6.jpg" },
+    { name: "Mapa", logo: "/7.jpg" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,25 +35,28 @@ export default function BrandsSlider() {
           </p>
         </div>
 
-        <div className="relative overflow-hidden">
+        {/* Ortak arka planlı alan */}
+        <div className="relative overflow-hidden bg-[#F4F4F4] rounded-lg p-6">
           <div
             className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * (100 / 4)}%)` }}
+            style={{ transform: `translateX(-${currentIndex * (100 / 2)}%)` }} // mobilde 2’li gösterim
           >
             {brands.concat(brands).map((brand, index) => (
-              <div key={index} className="flex-shrink-0 w-1/4 px-4">
-                <div className="bg-background border border-border rounded-lg p-6 h-24 flex items-center justify-center hover:shadow-md transition-shadow">
-                  <img
-                    src={brand.logo || "/placeholder.svg"}
-                    alt={brand.name}
-                    className="max-h-12 max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity"
-                  />
-                </div>
+              <div
+                key={index}
+                className="flex-shrink-0 w-1/2 sm:w-1/4 px-4 flex items-center justify-center"
+              >
+                <img
+                  src={brand.logo || "/placeholder.svg"}
+                  alt={brand.name}
+                  className="max-h-24 sm:max-h-16 object-contain"
+                />
               </div>
             ))}
           </div>
         </div>
 
+        {/* Slider noktaları */}
         <div className="flex justify-center mt-8 space-x-2">
           {brands.map((_, index) => (
             <button

@@ -1,14 +1,15 @@
-"use client"
+"use client";
 
-import { Users, Award, Clock, Shield, CheckCircle, Phone } from "lucide-react"
-import Link from "next/link"
+import { Users, Award, Clock, Shield, CheckCircle, Phone } from "lucide-react";
+import Link from "next/link";
 
 export default function HakkimizdaPage() {
   const values = [
     {
       icon: Shield,
       title: "Güvenilirlik",
-      description: "Müşterilerimize verdiğimiz sözleri tutarak güven oluşturuyoruz",
+      description:
+        "Müşterilerimize verdiğimiz sözleri tutarak güven oluşturuyoruz",
     },
     {
       icon: Award,
@@ -25,7 +26,7 @@ export default function HakkimizdaPage() {
       title: "Müşteri Odaklılık",
       description: "Müşteri memnuniyeti bizim için en önemli önceliktir",
     },
-  ]
+  ];
 
   const team = [
     {
@@ -52,14 +53,14 @@ export default function HakkimizdaPage() {
       experience: "10 yıl",
       image: "/placeholder.svg?key=team04",
     },
-  ]
+  ];
 
   const achievements = [
-    { number: "15+", label: "Yıl Deneyim" },
+    { number: "25+", label: "Yıl Deneyim" },
     { number: "200+", label: "Tamamlanan Proje" },
     { number: "50+", label: "Mutlu Müşteri" },
     { number: "%100", label: "Müşteri Memnuniyeti" },
-  ]
+  ];
 
   return (
     <>
@@ -81,14 +82,18 @@ export default function HakkimizdaPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Yeksan İnşaat Hakkında</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Yeksan İnşaat Hakkında
+              </h1>
               <p className="text-xl text-muted-foreground mb-8 text-pretty">
-                2009 yılından bu yana inşaat sektöründe faaliyet gösteren Yeksan İnşaat, kaliteli hizmet anlayışı ve
-                güvenilir çözümleriyle sektörde öncü konumdadır.
+                İnşaat sektörünün güvenilir ve tecrübeli ismi Yeksan İnşaat,
+                yapı alanındaki talepleri hızlı ve sorunsuz olarak yıllardır
+                yerine getiriyor. Sitemizde; şimdiye kadar ne gibi başarılara
+                imza attığımızı referanslarımızı inceleyerek görebilirsiniz.
               </p>
               <p className="text-lg text-muted-foreground mb-8">
-                Uzman kadromuz ve modern ekipmanlarımızla kaba inşaat, tadilat, yalıtım, projelendirme ve danışmanlık
-                hizmetlerinde müşterilerimizin beklentilerini aşmayı hedefliyoruz.
+                Yeksan İnşaat bugüne kadar birçok önemli yapı projeleri üzerinde
+                çalışmış sektörde kendine önemli bir yer edinmiştir.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -124,7 +129,9 @@ export default function HakkimizdaPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-primary-foreground">
-                <div className="text-4xl md:text-5xl font-bold mb-2">{achievement.number}</div>
+                <div className="text-4xl md:text-5xl font-bold mb-2">
+                  {achievement.number}
+                </div>
                 <div className="text-lg opacity-90">{achievement.label}</div>
               </div>
             ))}
@@ -136,7 +143,9 @@ export default function HakkimizdaPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Değerlerimiz</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Değerlerimiz
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               İş yapış şeklimizi belirleyen temel değerlerimiz
             </p>
@@ -148,7 +157,9 @@ export default function HakkimizdaPage() {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">{value.title}</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  {value.title}
+                </h3>
                 <p className="text-muted-foreground">{value.description}</p>
               </div>
             ))}
@@ -157,7 +168,7 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-muted/30">
+      {/* <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Ekibimiz</h2>
@@ -184,32 +195,37 @@ export default function HakkimizdaPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-card border border-border rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-card-foreground mb-6">Misyonumuz</h2>
+              <h2 className="text-2xl font-bold text-card-foreground mb-6">
+                Misyonumuz
+              </h2>
               <p className="text-muted-foreground mb-4">
-                İnşaat sektöründe kaliteli, güvenilir ve sürdürülebilir çözümler sunarak müşterilerimizin hayallerini
-                gerçeğe dönüştürmek.
+                İnşaat sektöründe kaliteli, güvenilir ve sürdürülebilir çözümler
+                sunarak müşterilerimizin hayallerini gerçeğe dönüştürmek.
               </p>
               <p className="text-muted-foreground">
-                Modern teknoloji ve geleneksel ustalığı birleştirerek, her projede mükemmelliği hedeflemek ve sektöre
-                değer katmak.
+                Modern teknoloji ve geleneksel ustalığı birleştirerek, her
+                projede mükemmelliği hedeflemek ve sektöre değer katmak.
               </p>
             </div>
 
             <div className="bg-card border border-border rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-card-foreground mb-6">Vizyonumuz</h2>
+              <h2 className="text-2xl font-bold text-card-foreground mb-6">
+                Vizyonumuz
+              </h2>
               <p className="text-muted-foreground mb-4">
-                Türkiye'nin önde gelen inşaat firmalarından biri olarak, yenilikçi yaklaşımlarımızla sektöre öncülük
-                etmek.
+                Türkiye'nin önde gelen inşaat firmalarından biri olarak,
+                yenilikçi yaklaşımlarımızla sektöre öncülük etmek.
               </p>
               <p className="text-muted-foreground">
-                Çevre dostu ve sürdürülebilir inşaat çözümleriyle gelecek nesillere daha yaşanabilir bir dünya bırakmak.
+                Çevre dostu ve sürdürülebilir inşaat çözümleriyle gelecek
+                nesillere daha yaşanabilir bir dünya bırakmak.
               </p>
             </div>
           </div>
@@ -220,8 +236,12 @@ export default function HakkimizdaPage() {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Neden Yeksan İnşaat?</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Bizi tercih etmeniz için sebeplerimiz</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Neden Yeksan İnşaat?
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Bizi tercih etmeniz için sebeplerimiz
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -229,22 +249,34 @@ export default function HakkimizdaPage() {
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">15+ Yıllık Deneyim</h3>
-                  <p className="text-muted-foreground">Sektörde uzun yıllar edindiğimiz tecrübe ve bilgi birikimi</p>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    15+ Yıllık Deneyim
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Sektörde uzun yıllar edindiğimiz tecrübe ve bilgi birikimi
+                  </p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Uzman Kadro</h3>
-                  <p className="text-muted-foreground">Alanında uzman mühendis, mimar ve işçi kadrosu</p>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Uzman Kadro
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Alanında uzman mühendis, mimar ve işçi kadrosu
+                  </p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Kaliteli Malzeme</h3>
-                  <p className="text-muted-foreground">Sadece birinci sınıf ve sertifikalı malzemeler kullanıyoruz</p>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Kaliteli Malzeme
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Sadece birinci sınıf ve sertifikalı malzemeler kullanıyoruz
+                  </p>
                 </div>
               </div>
             </div>
@@ -252,23 +284,34 @@ export default function HakkimizdaPage() {
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Zamanında Teslimat</h3>
-                  <p className="text-muted-foreground">Belirlenen sürelerde projelerimizi eksiksiz teslim ediyoruz</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Uygun Fiyat</h3>
-                  <p className="text-muted-foreground">Kaliteden ödün vermeden rekabetçi fiyatlar sunuyoruz</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Garanti</h3>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Zamanında Teslimat
+                  </h3>
                   <p className="text-muted-foreground">
-                    Tüm işlerimizde garanti veriyor, satış sonrası destek sağlıyoruz
+                    Belirlenen sürelerde projelerimizi eksiksiz teslim ediyoruz
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Uygun Fiyat
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Kaliteden ödün vermeden rekabetçi fiyatlar sunuyoruz
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Garanti
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Tüm işlerimizde garanti veriyor, satış sonrası destek
+                    sağlıyoruz
                   </p>
                 </div>
               </div>
@@ -277,5 +320,5 @@ export default function HakkimizdaPage() {
         </div>
       </section>
     </>
-  )
+  );
 }
